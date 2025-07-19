@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the HomeScreenState class, for the Dart programming language.">
+  <title>build method - HomeScreenState class - home_screen library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">bug_tracker_application</a></li>
+    <li><a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen">Features&#47;Bug_tracker&#47;PRESENTATION&#47;screens&#47;Main_screens&#47;home_screen.dart</a></li>
+    <li><a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState-class.html">HomeScreenState</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen&#47;HomeScreenState-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method in a number of different situations. For
+example:</p>
+<ul>
+<li>After calling <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/initState.html">initState</a>.</li>
+<li>After calling <a href="https://api.flutter.dev/flutter/widgets/State/didUpdateWidget.html">didUpdateWidget</a>.</li>
+<li>After receiving a call to <a href="https://api.flutter.dev/flutter/widgets/State/setState.html">setState</a>.</li>
+<li>After a dependency of this <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object changes (e.g., an
+<a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by the previous <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> changes).</li>
+<li>After calling <a href="https://api.flutter.dev/flutter/widgets/State/deactivate.html">deactivate</a> and then reinserting the <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object into
+the tree at another location.</li>
+</ul>
+<p>This method can potentially be called in every frame and should not have
+any side effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor, the
+given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>, and the internal state of this <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. The
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> argument is always the same as the <code>context</code> property of
+this <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object and will remain the same for the lifetime of this
+object. The <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> argument is provided redundantly here so that
+this method matches the signature for a <a href="https://api.flutter.dev/flutter/widgets/WidgetBuilder.html">WidgetBuilder</a>.</p>
+<h2 id="design-discussion">Design discussion</h2>
+<h3 id="why-is-the-build-method-on-state-and-not-statefulwidget">Why is the <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> method on <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a>, and not <a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a>?</h3>
+<p>Putting a <code>Widget build(BuildContext context)</code> method on <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> rather
+than putting a <code>Widget build(BuildContext context, State state)</code> method
+on <a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> gives developers more flexibility when subclassing
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a>.</p>
+<p>For example, <a href="https://api.flutter.dev/flutter/widgets/AnimatedWidget-class.html">AnimatedWidget</a> is a subclass of <a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> that
+introduces an abstract <code>Widget build(BuildContext context)</code> method for its
+subclasses to implement. If <a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> already had a <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> method
+that took a <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> argument, <a href="https://api.flutter.dev/flutter/widgets/AnimatedWidget-class.html">AnimatedWidget</a> would be forced to provide
+its <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object to subclasses even though its <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object is an
+internal implementation detail of <a href="https://api.flutter.dev/flutter/widgets/AnimatedWidget-class.html">AnimatedWidget</a>.</p>
+<p>Conceptually, <a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a> could also be implemented as a subclass of
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> in a similar manner. If the <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> method were on
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> rather than <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a>, that would not be possible anymore.</p>
+<p>Putting the <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> function on <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> rather than <a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> also
+helps avoid a category of bugs related to closures implicitly capturing
+<code>this</code>. If you defined a closure in a <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> function on a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a>, that closure would implicitly capture <code>this</code>, which is
+the current widget instance, and would have the (immutable) fields of that
+instance in scope:</p>
+<pre class="language-dart"><code class="language-dart">// (this is not valid Flutter code)
+class MyButton extends StatefulWidgetX {
+  MyButton({super.key, required this.color});
+
+  final Color color;
+
+  @override
+  Widget build(BuildContext context, State state) {
+    return SpecialWidget(
+      handler: () { print('color: $color'); },
+    );
+  }
+}
+</code></pre>
+<p>For example, suppose the parent builds <code>MyButton</code> with <code>color</code> being blue,
+the <code>$color</code> in the print function refers to blue, as expected. Now,
+suppose the parent rebuilds <code>MyButton</code> with green. The closure created by
+the first build still implicitly refers to the original widget and the
+<code>$color</code> still prints blue even through the widget has been updated to
+green; should that closure outlive its widget, it would print outdated
+information.</p>
+<p>In contrast, with the <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> function on the <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object, closures
+created during <a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState/build.html">build</a> implicitly capture the <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> instance instead of
+the widget instance:</p>
+<pre class="language-dart"><code class="language-dart">class MyButton extends StatefulWidget {
+  const MyButton({super.key, this.color = Colors.teal});
+
+  final Color color;
+  // ...
+}
+
+class MyButtonState extends State&lt;MyButton&gt; {
+  // ...
+  @override
+  Widget build(BuildContext context) {
+    return SpecialWidget(
+      handler: () { print('color: ${widget.color}'); },
+    );
+  }
+}
+</code></pre>
+<p>Now when the parent rebuilds <code>MyButton</code> with green, the closure created by
+the first build still refers to <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object, which is preserved across
+rebuilds, but the framework has updated that <a href="https://api.flutter.dev/flutter/widgets/State-class.html">State</a> object's <a href="https://api.flutter.dev/flutter/widgets/State/widget.html">widget</a>
+property to refer to the new <code>MyButton</code> instance and <code>${widget.color}</code>
+prints green, as expected.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  final User? user = FirebaseAuth.instance.currentUser;
+
+  return Scaffold(
+    floatingActionButton: FloatingActionButton(
+      shape: CircleBorder(),
+      backgroundColor: Colors.blue,
+      child: Icon(Icons.add, color: ColorConstant.mainWhite),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) =&gt; AddForm(isEditMode: false)),
+        );
+        setState(() {});
+      },
+    ),
+    backgroundColor: ColorConstant.Scaffoldgb,
+
+    &#47;&#47;&#47;&#47;&#47;&#47;&#47;APP BAR &#47;&#47;&#47;&#47;&#47;&#47;&#47;
+    &#47;&#47;&#47;   APP BAR&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+    appBar: AppBar(
+      iconTheme: IconThemeData(color: Colors.white),
+      backgroundColor: Colors.blue,
+      title: Text(
+        &quot;BUG TRACKER&quot;,
+        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+      ),
+      actions: [
+        IconButton(
+          onPressed: () {
+            NotificationService.showNotification(
+              &quot;Hey shafeeque&quot;,
+              &quot;Aren&#39;t you reporting any bugs today?&quot;,
+            );
+          },
+          icon: Icon(Icons.notification_add, color: Colors.white),
+        ),
+        SizedBox(width: 5),
+      ],
+    ),
+    drawer: Drawer(
+      shadowColor: Colors.white,
+
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          &#47;&#47; DrawerHeader(
+          &#47;&#47;   decoration: BoxDecoration(color: Colors.blue),
+          &#47;&#47;   child: Text(&#39;Menu&#39;, style: TextStyle(color: Colors.white)),
+          &#47;&#47; ),
+          UserAccountsDrawerHeader(
+            currentAccountPicture: InkWell(
+              onTap: () async {
+                final ImagePicker picker = ImagePicker();
+                selectedImage = await picker.pickImage(
+                  source: ImageSource.gallery,
+                );
+                if (selectedImage != null) {
+                  final storageRef = FirebaseStorage.instance.ref();
+                  Reference? imagereference = storageRef.child(
+                    &quot;mountains.jpg&quot;,
+                  );
+                  final mountainsRef = imagereference.child(&quot;userImage.jpg&quot;);
+                  await imagereference.putFile(File(selectedImage!.path));
+                  url = await imagereference.getDownloadURL();
+                }
+                &#47;&#47; Create a storage reference from our app
+
+                setState(() {});
+              },
+
+              child: CircleAvatar(
+                backgroundImage:
+                    selectedImage != null
+                        ? Image.file(File(selectedImage!.path)).image
+                        : null,
+                &#47;&#47;  NetworkImage(
+                &#47;&#47;   &quot;https:&#47;&#47;cdn.pixabay.com&#47;photo&#47;2022&#47;06&#47;05&#47;07&#47;04&#47;person-7243410_1280.png&quot;,
+                &#47;&#47; ),
+                &#47;&#47; backgroundImage: Image.file(File(selectedImage!.path)).image,
+                &#47;&#47; child: Icon(Icons.person, size: 50, color: Colors.blue),
+              ),
+            ),
+            accountName: Text(user?.displayName ?? &quot;unknown&quot;),
+            accountEmail: Text(user?.email ?? &#39;No Email&#39;),
+          ),
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text(&#39;Home&#39;),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text(&#39;Report&#39;),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =&gt; StatusScreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text(&#39;Logout&#39;),
+            onTap: () async {
+              await FirebaseAuth.instance.signOut();
+            },
+          ),
+        ],
+      ),
+    ),
+
+    &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47; Drawer closed &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+    &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  open body   &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+    body: Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: SingleChildScrollView(
+          child: BlocBuilder&lt;BugBloc, BugState&gt;(
+            builder: (context, state) {
+              if (state is BugInitial || state is BugLoading) {
+                return CircularProgressIndicator();
+              }
+              if (state is BugLoaded) {
+                final allBugs = state.bugss;
+                &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  FILTERING BUGS BY STATUS &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  FILTERING BUGS BY STATUS &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  FILTERING BUGS BY STATUS &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                List&lt;BugModelCustom&gt; fixedBugs =
+                    allBugs.where((bug) =&gt; bug.status == &quot;fixed&quot;).toList();
+
+                List&lt;BugModelCustom&gt; unfixedBugs =
+                    allBugs.where((bug) =&gt; bug.status == &quot;unfixed&quot;).toList();
+
+                &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  FILTERING BUGS BY SEVERITY &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  FILTERING BUGS BY SEVERITY &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;  FILTERING BUGS BY SEVERITY &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+
+                List&lt;BugModelCustom&gt; lowSeverity =
+                    allBugs.where((bug) =&gt; bug.severity == &quot;low&quot;).toList();
+                List&lt;BugModelCustom&gt; mediumSeverity =
+                    allBugs.where((bug) =&gt; bug.severity == &quot;medium&quot;).toList();
+
+                List&lt;BugModelCustom&gt; highSeverity =
+                    allBugs.where((bug) =&gt; bug.severity == &quot;High&quot;).toList();
+
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          &quot;Severity&quot;,
+                          style: TextStyle(
+                            color: ColorConstant.mainBlack,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: List.generate(
+                            3,
+
+                            (index) =&gt; Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 5,
+                                vertical: 5,
+                              ),
+                              child: SizedBox(
+                                child: Sevirity(
+                                  tittle: AppSession.severity[index],
+                                  borderclr: Colors.black,
+                                  ontaP: () {
+                                    if (index == 0) {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder:
+                                              &#47;&#47;&#47;&#47;&#47;&#47; SEVERITY SCREEN &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                                              &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47; SEVERITY SCREEN &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                                              &#47;&#47;&#47;  &#47;&#47;&#47;&#47;&#47;&#47; SEVERITY SCREEN &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                                              &#47;&#47;&#47;  &#47;&#47;&#47;&#47;&#47;&#47; SEVERITY SCREEN &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                                              (context) =&gt; SeverityScreen(
+                                                heading: &quot;Low severity&quot;,
+                                                customcolor: Colors.white,
+                                                bugs: lowSeverity,
+                                              ),
+                                        ),
+                                      );
+                                    } else if (index == 1) {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder:
+                                              (context) =&gt; SeverityScreen(
+                                                heading: &quot;Medium severity&quot;,
+                                                customcolor:
+                                                    Colors.yellow.shade100,
+                                                bugs: mediumSeverity,
+                                              ),
+                                        ),
+                                      );
+                                    } else if (index == 2) {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder:
+                                              (context) =&gt; SeverityScreen(
+                                                heading: &quot;High severity&quot;,
+                                                customcolor:
+                                                    Colors.red.shade100,
+                                                bugs: highSeverity,
+                                              ),
+                                        ),
+                                      );
+                                    }
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        CustomSize.kSizedBoxheight10,
+
+                        Text(
+                          &quot;Status&quot;,
+                          style: TextStyle(
+                            color: ColorConstant.mainBlack,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        CustomSize.kSizedBoxheight10,
+
+                        &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47; STATUS LIST &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                        &#47;&#47;&#47; &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47; STATUS LIST &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                        BlocBuilder&lt;BugBloc, BugState&gt;(
+                          builder: (context, state) {
+                            return Row(
+                              &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47; STATUS  LIST  &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                              children: List.generate(
+                                AppSession.status.length,
+                                (index) =&gt; Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 5,
+                                    vertical: 5,
+                                  ),
+                                  child: Sevirity(
+                                    borderclr: Colors.black,
+                                    ontaP: () {
+                                      if (index == 0) {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder:
+                                                (context) =&gt;
+                                                    FixedBugListScreen(
+                                                      isFixed: true,
+                                                      bugsFixed: fixedBugs,
+                                                      heading: &quot;Fixed Bugs&quot;,
+                                                    ),
+                                          ),
+                                        );
+                                      } else if (index == 1) {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder:
+                                                (context) =&gt;
+                                                    FixedBugListScreen(
+                                                      bugsFixed: unfixedBugs,
+                                                      isFixed: false,
+                                                      heading: &quot;Unfixed Bugs&quot;,
+                                                    ),
+                                          ),
+                                        );
+                                      }
+                                    },
+                                    customcolor:
+                                        index == 0
+                                            ? Colors.green.shade100
+                                            : Colors.red.shade100,
+                                    tittle: AppSession.status[index],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+
+                    BlocBuilder&lt;BugBloc, BugState&gt;(
+                      builder: (context, state) {
+                        if (state is BugLoading) {
+                          return CircularProgressIndicator();
+                        }
+                        if (state is BugLoaded) {
+                          return Text(
+                            &quot;All Bugs (${state.bugss.length})&quot;,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          );
+                        }
+                        return Text(&quot;Loading bugs...&quot;);
+                      },
+                    ),
+                    CustomSize.kSizedBoxheight10,
+                    BlocBuilder&lt;BugBloc, BugState&gt;(
+                      builder: (context, state) {
+                        if (state is BugLoaded) {
+                          return ListView.separated(
+                            physics: NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            itemBuilder: (context, index) {
+                              final bug = state.bugss[index];
+                              &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47; HOME SCREWEN UI &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+                              &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47; HOME SCREWEN UI &#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;&#47;
+
+                              return BugsCard(
+                                onDelete: () {
+                                  context.read&lt;BugBloc&gt;().add(
+                                    BugDelete(bug.userId),
+                                  );
+                                },
+
+                                title: bug.title,
+                                description: bug.description,
+                                date: bug.date.toString(),
+                                Sevirity: bug.severity.toString(),
+                                status: bug.status,
+                                assignedDeveloper: bug.assignedDeveloper,
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder:
+                                          (context) =&gt; BugDetailScreen(
+                                            title: bug.title,
+                                            desc: bug.description,
+                                            date: bug.date.toString(),
+                                            severity: bug.severity.toString(),
+                                            status: bug.status,
+                                            developer: bug.assignedDeveloper,
+                                            onUpdate: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder:
+                                                      (context) =&gt; AddForm(
+                                                        isEditMode: true,
+
+                                                        title: bug.title,
+                                                        desc: bug.description,
+                                                        developer:
+                                                            bug.assignedDeveloper,
+                                                        date:
+                                                            bug.date
+                                                                .toString(),
+                                                        id: bug.userId,
+                                                        severity:
+                                                            bug.severity
+                                                                .toString(),
+                                                        status: bug.status,
+                                                      ),
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                    ),
+                                  );
+                                },
+                              );
+                            },
+                            separatorBuilder:
+                                (context, index) =&gt; SizedBox(height: 10),
+                            itemCount: state.bugss.length,
+                          );
+                        } else if (state is BugError) {
+                          return Text(state.message);
+                        }
+                        return Center(child: CircularProgressIndicator());
+                      },
+                    ),
+                  ],
+                );
+              }
+
+              return Center(child: CircularProgressIndicator());
+            },
+          ),
+        ),
+      ),
+    ),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">bug_tracker_application</a></li>
+    <li><a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen">home_screen</a></li>
+    <li><a href="../../Features_Bug_tracker_PRESENTATION_screens_Main_screens_home_screen/HomeScreenState-class.html">HomeScreenState</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+    <h5>HomeScreenState class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    bug_tracker_application
+      1.0.0+1
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+
