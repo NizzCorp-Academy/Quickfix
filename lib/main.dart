@@ -1,11 +1,13 @@
-import 'package:bug_tracker_application/Features/Domain/services/bug_services/bug_services.dart';
+import 'package:bug_tracker_application/Features/Bug_tracker/DATA/Repositories/bug_services/bug_services.dart';
+import 'package:bug_tracker_application/Features/Bug_tracker/DATA/Services/fcm_notification.dart';
 
-import 'package:bug_tracker_application/Features/Presenetation/Bloc/Auhentication_bloc/auth_bloc.dart';
-import 'package:bug_tracker_application/Features/Presenetation/Bloc/Bug/bug_bloc.dart';
-import 'package:bug_tracker_application/Features/Presenetation/screens/Main_screens/home_screen.dart';
-import 'package:bug_tracker_application/Features/Presenetation/screens/Main_screens/splash_screen.dart';
+import 'package:bug_tracker_application/Features/Authentication/PRESENTATION/Auhentication_bloc/auth_bloc.dart';
+import 'package:bug_tracker_application/Features/Bug_tracker/PRESENTATION/Bloc/Bug/bug_bloc.dart';
+import 'package:bug_tracker_application/Features/Bug_tracker/PRESENTATION/Screens/Main_screens/home_screen.dart';
+import 'package:bug_tracker_application/Features/Bug_tracker/PRESENTATION/Screens/Main_screens/splash_screen.dart';
 
 import 'package:bug_tracker_application/firebase_options.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -39,6 +41,7 @@ Future<void> main() async {
       child: MyApp(),
     ),
   );
+  await FcmNotificationService().registerPushNotificationHandler();
 }
 
 class MyApp extends StatelessWidget {

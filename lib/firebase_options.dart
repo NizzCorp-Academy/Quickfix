@@ -17,24 +17,15 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -60,4 +51,31 @@ class DefaultFirebaseOptions {
     storageBucket: 'sample-project-25677.firebasestorage.app',
   );
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBDuqX-CF7fokXEMSHOU8TKfN3Rqxk2cnY',
+    appId: '1:28501173344:web:a1121f2bf51d5ce9c78f05',
+    messagingSenderId: '28501173344',
+    projectId: 'sample-project-25677',
+    authDomain: 'sample-project-25677.firebaseapp.com',
+    storageBucket: 'sample-project-25677.firebasestorage.app',
+    measurementId: 'G-RSRV689850',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBlrTmPCvPPDhKeMjZyYHv-yjv5oCfJdu4',
+    appId: '1:28501173344:ios:b1d074a97b6a0ceac78f05',
+    messagingSenderId: '28501173344',
+    projectId: 'sample-project-25677',
+    storageBucket: 'sample-project-25677.firebasestorage.app',
+    iosBundleId: 'com.example.bugTrackerApplication',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyBlrTmPCvPPDhKeMjZyYHv-yjv5oCfJdu4',
+    appId: '1:28501173344:ios:b1d074a97b6a0ceac78f05',
+    messagingSenderId: '28501173344',
+    projectId: 'sample-project-25677',
+    storageBucket: 'sample-project-25677.appspot.com',
+    iosBundleId: 'com.example.bugTrackerApplication',
+  );
 }
