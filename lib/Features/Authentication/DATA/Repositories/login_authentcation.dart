@@ -34,7 +34,6 @@ class LoginAuthentcation {
   /// - [context/] The BuildContext used for showing SnackBars and navigation.
   /// -----------------------------------------------------------------------------------------------------
   Future<void> register(
-  
     String name,
     String email,
     String password,
@@ -64,16 +63,14 @@ class LoginAuthentcation {
         );
       }
     } on FirebaseAuthException catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          backgroundColor: ColorConstant.mainRed,
-          content: Text("email already exists"),
-        ),
-      );
       if (e.code == 'weak-password') {
-        print('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
-        print('The account already exists for that email.');
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: ColorConstant.mainRed,
+            content: Text("email already exists"),
+          ),
+        );
       }
     } catch (e) {
       print(e);
