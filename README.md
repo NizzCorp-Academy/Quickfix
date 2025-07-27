@@ -72,6 +72,7 @@ Access from **Drawer > Report**
 | ![BLoC](https://img.shields.io/badge/BLoC%20Pattern-42A5F5?logo=bloc&logoColor=white) | State management pattern   |
 
 ---
+## 🛡️ License
 This project is part of a student project at NizzCorp Academy and is open for educational and demo purposes. All projects in this repository are intended for educational purposes only. Use or reuse of any code, design, or documentation must include proper attribution.
 
 **Please respect the intellectual contributions and efforts of all collaborators and contributors.**
