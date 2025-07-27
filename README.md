@@ -10,6 +10,7 @@ A Flutter app to track and manage software bugs efficiently using **Firebase** a
 📎 Website: https://github.com/NizzCorp-Academy/Quickfix
 
 🌐 GitHub Repo: https://github.com/NizzCorp-Academy/Quickfix
+
 ---
 
 ## 🚀 Features
