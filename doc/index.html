@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickFix - Bug Tracker App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/NizzCorp-Academy/Quickfix/main/docs/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body class="bg-gray-50 dark:bg-darkbg text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <!-- Navigation Bar -->
+    <nav class="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="https://nizzcorp-academy.github.io/Quickfix" class="flex items-center">
+                        <img src="https://raw.githubusercontent.com/NizzCorp-Academy/Quickfix/main/docs/favicon.ico" alt="QuickFix Logo" class="h-8 w-8 mr-2">
+                        <span class="text-xl font-bold text-primary dark:text-accent">QuickFix</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium">Home</a>
+                    <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium">Features</a>
+                    <a href="#showcase" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium">ShowCase</a>
+                    <a href="https://nizzcorp-academy.github.io/Quickfix/Documentation" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium">Documentation</a>
+                    <a href="#team" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium">Team</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent font-medium">Contact</a>
+                    <a href="https://github.com/NizzCorp-Academy/Quickfix" target="_blank" class="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuButton" class="text-gray-700 dark:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent">Home</a>
+                <a href="#features" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent">Features</a>
+                <a href="#showcase" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent">ShowCase</a>
+                <a href="https://nizzcorp-academy.github.io/Quickfix/Documentation" target="_blank" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent">Documentation</a>
+                <a href="#team" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent">Team</a>
+                <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-accent">Contact</a>
+                <a href="https://github.com/NizzCorp-Academy/Quickfix" target="_blank" class="block mt-2 bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+                <div class="mt-2 flex justify-center">
+                    <button id="darkModeToggleMobile" class="dark-mode-toggle p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">🐞 Bug Tracker App</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 dark:text-gray-300">Track bugs. Fix faster.</h2>
+                <p class="text-lg mb-8 text-gray-600 dark:text-gray-400">
+                    QuickFix is a powerful Flutter application designed to help development teams track, manage, and resolve software bugs efficiently. With Firebase backend and BLoC state management, it's built for performance and scalability.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://github.com/NizzCorp-Academy/Quickfix" target="_blank" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg flex items-center font-medium">
+                        <i class="fab fa-github mr-2"></i> GitHub Repo
+                    </a>
+                    <a href="https://github.com/NizzCorp-Academy/Quickfix/releases/download/1.0.0%2B1/app-release.apk" class="bg-secondary hover:bg-yellow-500 text-gray-800 px-6 py-3 rounded-lg flex items-center font-medium">
+                        <i class="fas fa-download mr-2"></i> Download APK
+                    </a>
+    
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl opacity-20 blur"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+                        <img src="./images/image.png" alt="QuickFix App Screenshot" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Powerful Features</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    QuickFix comes packed with everything you need to manage your software bugs efficiently
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="text-primary dark:text-accent mb-4">
+                        <i class="fas fa-plus-circle text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Add/Edit/Delete Bugs</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Easily create, modify, or remove bug reports with an intuitive interface designed for developers.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="text-primary dark:text-accent mb-4">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Assign Developers</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Quickly assign bugs to team members and track progress with clear ownership indicators.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="text-primary dark:text-accent mb-4">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Bug Fix Stats & Streaks</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Visualize your team's performance with detailed statistics and motivational streaks.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="text-primary dark:text-accent mb-4">
+                        <i class="fas fa-filter text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Filter by Status/Severity</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Powerful filtering options to focus on critical issues or specific bug states.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="text-primary dark:text-accent mb-4">
+                        <i class="fas fa-lock text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Firebase Auth</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Secure authentication system with Firebase to protect your bug tracking data.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 feature-card transition-all duration-300">
+                    <div class="text-primary dark:text-accent mb-4">
+                        <i class="fas fa-bell text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Push Notifications</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Stay updated with real-time notifications for assigned bugs and status changes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Technology Stack</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Built with modern technologies for optimal performance and developer experience
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <!-- Flutter -->
+                <div class="flex flex-col items-center">
+                    <div class="tech-icon bg-white dark:bg-gray-700 rounded-full p-6 shadow-md mb-3">
+                        <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter" class="w-10 h-10" />
+                    </div>
+                    <h3 class="font-semibold">Flutter</h3>
+                </div>
+                
+                <!-- Dart -->
+                <div class="flex flex-col items-center">
+                    <div class="tech-icon bg-white dark:bg-gray-700 rounded-full p-6 shadow-md mb-3">
+                        <img src="https://cdn.simpleicons.org/dart/0175C2" alt="Dart" width="40" height="40" />
+                    </div>
+                    <h3 class="font-semibold">Dart</h3>
+                </div>
+                
+                <!-- Firebase -->
+                <div class="flex flex-col items-center">
+                    <div class="tech-icon bg-white dark:bg-gray-700 rounded-full p-6 shadow-md mb-3">
+                        <i class="fas fa-fire text-4xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="font-semibold">Firebase</h3>
+                </div>
+                
+                <!-- BLoC -->
+                <div class="flex flex-col items-center">
+                    <div class="tech-icon bg-white dark:bg-gray-700 rounded-full p-6 shadow-md mb-3">
+                        <i class="fas fa-project-diagram text-4xl text-purple-500"></i>
+                    </div>
+                    <h3 class="font-semibold">BLoC</h3>
+                </div>
+                
+                <!-- Firestore -->
+                <div class="flex flex-col items-center">
+                    <div class="tech-icon bg-white dark:bg-gray-700 rounded-full p-6 shadow-md mb-3">
+                        <i class="fas fa-database text-4xl text-orange-500"></i>
+                    </div>
+                    <h3 class="font-semibold">Firestore</h3>
+                </div>
+                
+                <!-- Auth -->
+                <div class="flex flex-col items-center">
+                    <div class="tech-icon bg-white dark:bg-gray-700 rounded-full p-6 shadow-md mb-3">
+                        <i class="fas fa-user-shield text-4xl text-green-500"></i>
+                    </div>
+                    <h3 class="font-semibold">Auth</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">App Showcase</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    See QuickFix in action with these screenshots and demo videos
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Screenshot 1 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x1200/F9FAFB/02569B?text=Dashboard" alt="Dashboard" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Dashboard Overview</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">View all your bugs at a glance</p>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 2 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x1200/F9FAFB/02569B?text=Bug+Details" alt="Bug Details" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Bug Details</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Detailed view with all bug information</p>
+                    </div>
+                </div>
+                
+                <!-- Screenshot 3 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x1200/F9FAFB/02569B?text=Statistics" alt="Statistics" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Statistics</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mt-1">Track your team's performance</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Meet The Team</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    A group of passionate students from NizzCorp Academy who built this app as their Mini project.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Team Member 1 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col md:flex-row items-center">
+                    <img class="w-24 h-24 rounded-full bg-primary bg-opacity-10 dark:bg-opacity-20 flex items-center justify-center mb-4 md:mb-0 md:mr-6" src="https://github.com/UjwalNizzCorp.png">
+                        
+                    <div>
+                        <h3 class="text-xl font-semibold">Ujwal A Krishan</h3>
+                        <p class="text-secondary dark:text-yellow-400 font-medium mb-2">Team Lead</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">
+                            Focused on development and system architecture. Passionate about creating efficient solutions.
+                        </p>
+                        <a href="https://github.com/UjwalNizzCorp" target="_blank" class="inline-block mt-3 text-primary dark:text-accent hover:underline">
+                            <i class="fab fa-github mr-1"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 flex flex-col md:flex-row items-center">
+                    <img class="w-24 h-24 rounded-full bg-primary bg-opacity-10 dark:bg-opacity-20 flex items-center justify-center mb-4 md:mb-0 md:mr-6" src="https://github.com/shafeequegithubb.png"/>
+                    <div>
+                        <h3 class="text-xl font-semibold">Mohammed Shafeeque</h3>
+                        <p class="text-secondary dark:text-yellow-400 font-medium mb-2">Flutter Developer</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">
+                            Implemented the Flutter & Firebase with attention to performance and cross-platform compatibility.
+                        </p>
+                        <a href="https://github.com/shafeequegithubb" target="_blank" class="inline-block mt-3 text-primary dark:text-accent hover:underline">
+                            <i class="fab fa-github mr-1"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Projects Section -->
+    <section class="py-16 bg-primary dark:bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Explore More Projects</h2>
+            <p class="text-lg mb-8 max-w-3xl mx-auto">
+                Discover other innovative student projects developed at NizzCorp Academy. From mobile apps to AI experiments, explore how our students solve real-world problems through technology and creativity.
+            </p>
+            <a href="https://nizzcorp-academy.github.io/" target="_blank" class="inline-block bg-white text-primary dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 px-6 py-3 rounded-lg font-medium transition-colors">
+                Browse All Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Contact Us</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Have questions or want to learn more about QuickFix? Get in touch with us.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <!-- Email -->
+                <a href="mailto:info@nizzcorp.com" class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-primary dark:text-accent mb-3">
+                        <i class="fas fa-envelope text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Email</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">info@nizzcorp.com</p>
+                </a>
+                
+                <!-- Location -->
+                <a href="https://g.co/kgs/jMsY5WB" target="_blank" class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-primary dark:text-accent mb-3">
+                        <i class="fas fa-map-marker-alt text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Location</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">NizzCorp Academy</p>
+                </a>
+                
+                <!-- Website -->
+                <a href="https://nizzcorp.com" target="_blank" class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-primary dark:text-accent mb-3">
+                        <i class="fas fa-globe text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Website</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">nizzcorp.com</p>
+                </a>
+                
+                <!-- Phone -->
+                <a href="tel:+918281009160" class="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-primary dark:text-accent mb-3">
+                        <i class="fas fa-phone-alt text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Phone</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">+91 8281009160</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="https://raw.githubusercontent.com/NizzCorp-Academy/Quickfix/main/docs/favicon.ico" alt="QuickFix Logo" class="h-8 w-8 mr-2">
+                        <span class="text-xl font-bold text-white">QuickFix</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">Made with <span class="text-red-500">❤</span> by NizzCorp Academy Students</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nizzcorpacademy" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/NizzCorp-Academy" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 NizzCorp Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

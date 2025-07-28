@@ -7,7 +7,7 @@ A Flutter app to track and manage software bugs efficiently using **Firebase** a
 ![License](https://img.shields.io/github/license/NizzCorp-Academy/Bug-Tracker)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-📎 Website: https://github.com/NizzCorp-Academy/Quickfix
+📎 Website:  https://nizzcorp-academy.github.io/Quickfix
 
 🌐 GitHub Repo: https://github.com/NizzCorp-Academy/Quickfix
 

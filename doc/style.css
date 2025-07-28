@@ -1,0 +1,22 @@
+.gradient-text {
+    background: linear-gradient(90deg, #02569B 0%, #42A5F5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.dark .gradient-text {
+    background: linear-gradient(90deg, #42A5F5 0%, #FFCA28 100%);
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.tech-icon {
+    transition: all 0.3s ease;
+}
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+.dark-mode-toggle {
+    transition: all 0.3s ease;
+}
